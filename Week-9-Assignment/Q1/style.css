@@ -1,0 +1,59 @@
+body{
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+}
+.main{
+    background-color: #fff;
+    border: 1px solid  #fff;
+    height: 500px;
+    width: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+
+}
+h1{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+.sub-main{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    row-gap: 40px;
+}
+.sub-main .username{
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 22px;
+    
+}
+.sub-main .username:hover,.sub-main .username:focus{
+    /* border: none; */
+    outline: none;
+}
+
+.sub-main .password{
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 22px;
+
+}
+.sub-main .password:hover,.sub-main .password:focus{
+    /* border: none; */
+    outline: none;
+}
+.sub-main button{
+    height: 50px;
+    /* background-color: rgb(82, 144, 225); */
+    font-size: 22px;
+    border-radius: 5px;
+    color: #fff;
+    width: 100%; background-color: #1e87f0;
+
+}
