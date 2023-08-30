@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-3</title>
+    <style>
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            border: 4px solid black;
+            overflow: hidden;
+        }
+        #number{
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+        <h1 id="heading">Counter</h1>
+        <button id="plus-button">+</button>
+        <span id="number">0</span>
+        <button id="minus-button">-</button>
+
+        <script>
+            let plus_button=document.getElementById('plus-button');
+            let minus_button=document.getElementById('minus-button');
+            let numbers=document.getElementById('number');
+            let count=0;
+            plus_button.addEventListener('click',(event)=>{
+                    numbers.innerText=count += 1;
+            })
+            minus_button.addEventListener('click',()=>{
+                numbers.innerText -= 1;
+                if(number.innerText < 0)
+                {
+                    alert('Counter is going beyond 0');
+                    
+                }
+            })
+
+        </script>
+</body>
+</html>

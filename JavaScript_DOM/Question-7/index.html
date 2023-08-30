@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-7</title>
+</head>
+<body>
+        <input type="text"  id="text">
+        <h2>Results :</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>javaScript</li>
+            <li>CSS Tailwind</li>
+        </ul>
+
+        <script>
+            let textvalue=document.getElementById('text');
+            let listvalue=document.querySelectorAll('li');
+           textvalue.addEventListener('input',()=>{
+            for (let list of listvalue) {
+            let value=list.textContent.toLowerCase();
+            console.log(value);
+            if(value.includes(textvalue.value))
+            {
+                list.style.display='block';
+            }
+            else{
+                list.style.display='none';
+            }
+            
+           }
+           })
+         
+        </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!-- The FileReader result property returns the file's contents. This property is only valid after the read operation is complete, and the format of the data depends on which of the methods was used to initiate the read operation. -->
+
+<!-- // very Important POINTS realated to solve this is Question.... -->
+
+<!-- The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read.
+
+load event:-
+Fired when a read has completed successfully. -->
+
+
+<!-- 
+The File API makes it possible to access a FileList containing File objects representing the files selected by the user.
+
+const selectedFile = document.getElementById("input").files[0]; -->
+
+
+<!-- 
+Using the File API, web content can ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML <input type="file"> element or by drag and drop. -->
+
+
+<!-- The readAsDataURL method is used to read the contents of the specified Blob or File. When the read operation is finished, the readyState becomes DONE, and the loadend is triggered. At that time, the result attribute contains the data as a data: URL representing the file's data as a base64 encoded string. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-1</title>
+
+    <style>
+        #logo{
+                height: 300px;
+                width: 300px;
+        }
+    </style>
+</head>
+<body>
+        <h1>Update Profile Picture</h1>
+        <input type="file" name="filecontent" id="File">
+        <h2>Your Profile Picture</h2>
+        <img src="" alt="No profile Photo" id="logo">
+        
+        <script>
+            let image=document.getElementById('logo');
+            let filepicker=document.getElementById('File');
+
+            filepicker.addEventListener('change',(e)=>{
+                let reader=new FileReader();
+                reader.readAsDataURL(filepicker.files[0]);
+
+                console.log(reader);
+
+                reader.addEventListener('load',()=>{
+                    image.src=reader.result;
+                })
+                
+
+            })
+        </script>
+        
+    
+</body>
+
+</html>
