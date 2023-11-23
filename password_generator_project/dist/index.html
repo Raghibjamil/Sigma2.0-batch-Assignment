@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password_Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-slate-800 flex justify-center  h-screen items-center">
+    <div class="w-2/6 border-2 border-blue-100 flex flex-col justify-center py-[25px] items-center gap-y-2.5">
+        <h1 class="text-white text-center text-4xl ">Password Generator</h1>
+        <input type="text" placeholder="Click on Generate button " class="w-3/4 p-1 rounded-md focus:outline-none focus:border-none " id="password">
+        <div class="flex mt-5 gap-x-4">
+            <button class="bg-sky-600 px-[25px] py-[5px] text-xl rounded-md text-white " 
+            onclick="createpassword()">Generate</button>
+            <button class="bg-sky-600 px-[25px] py-[5px] text-xl rounded-md text-white"
+            onclick="copypassword()">Copy To Clipboard</button>
+        </div>
+        <div>
+            <div class="flex justify-between  gap-x-24">
+                <p class="text-white text-2xl">Password Length</p>
+                 <div class="w-20  h-9 border-2 border-white text-2xl rounded-md text-white">12</div>
+            </div>
+            <div class="flex justify-between  gap-x-24  items-center">
+                <p class="text-white text-2xl">Include UpperCase letters</p>
+                
+                <input type="checkbox" id="myCheckbox" class="form-checkbox h-5 w-5 text-blue-600">
+
+                
+            </div>
+            <div class="flex justify-between  gap-x-24  items-center">
+                <p class="text-white text-2xl">Include lowerCase letters</p>
+                
+                <input type="checkbox" id="myCheckbox1" class="form-checkbox h-5 w-5 text-blue-600">
+
+                
+            </div>
+            <div class="flex justify-between  gap-x-24  items-center">
+                <p class="text-white text-2xl">Include numbers</p>
+                
+                <input type="checkbox" id="myCheckbox2" class="form-checkbox h-5 w-5 text-blue-600">
+
+                
+            </div>
+            <div class="flex justify-between  gap-x-24  items-center">
+                <p class="text-white text-2xl">Include symbols</p>
+                
+                <input type="checkbox" id="myCheckbox3" class="form-checkbox h-5 w-5 text-blue-600">
+
+                
+            </div>
+        </div>
+    </div>
+    
+        <script src="./index.js"></script>
+</body>
+</html>
