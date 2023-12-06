@@ -1,0 +1,1 @@
+Node.js is a runtime environment that enables server-side JavaScript execution. It's event-driven and non-blocking, allowing efficient handling of concurrent connections. Widely used for building scalable and fast network applications, it's based on the V8 JavaScript engine.
